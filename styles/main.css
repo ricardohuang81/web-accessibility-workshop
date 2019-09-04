@@ -45,15 +45,17 @@ p {
 }
 
 a {
-  text-decoration: none;
   color: black;
-  outline: none;
 }
 
 a:hover,
 a:active,
 a:focus {
   color: green;
+}
+
+.specific-case a {
+  text-decoration: none;
 }
 
 img {
@@ -122,6 +124,7 @@ textarea {
 .label.required::after {
   content: "*";
   margin-left: 5px;
+  color: red;
 }
 
 /*
@@ -139,7 +142,6 @@ button,
   padding: 8px 12px;
   width: auto;
   min-width: 120px;
-  cursor: default;
   border: 1px solid cadetblue;
   border-radius: 6px;
   text-align: center;
@@ -194,8 +196,9 @@ button,
 }
 
 .form-subscribe .input-wrapper .label {
-  float: left;
-  width: 15%;
+  width: 30%;
+  display: inline-block;
+  font-size: 22px;
 }
 
 .form-subscribe .input-wrapper .label-checkbox {
@@ -203,8 +206,12 @@ button,
   float: none;
 }
 
-.form-subscribe .input-wrapper input[type="checkbox"] {
-  width: auto;
+.form-subscribe .input-wrapper input[type="checkbox"]:active,
+.form-subscribe .input-wrapper input[type="checkbox"]:focus
+{
+  border: 0;
+  box-shadow: 0 0 0 1px white,
+              0 0 0 4px cadetblue;
 }
 
 .form-subscribe .button {
@@ -223,6 +230,7 @@ button,
 }
 
 .form-subscribe input.error {
+  border: 2px solid red;
   box-shadow: 0 0 0 2px red;
 }
 
@@ -430,8 +438,16 @@ button,
   margin: 20px 0;
 }
 
-.banner.hide {
+/* .banner.hide {
   display: none;
+} */
+
+.show-for-screen-reader {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }
 
 /*

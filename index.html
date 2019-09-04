@@ -44,7 +44,7 @@
 
         <div class="content-wrapper">
           <h1>Video</h1>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/20SHvU2PKsM?controls=0;autoplay=1;loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/20SHvU2PKsM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div>
             <span>Read the YouTube Embedded Player and Parameters docs:</span>
             <a href="https://developers.google.com/youtube/player_parameters">here</a>
@@ -83,13 +83,15 @@
 
           <form class="form-subscribe" name="subscribeDigest">
             <div class="input-wrapper">
-              <input type="text" required/>
+              
               <div class="label">Name</div>
+              <input type="text" required />
             </div>
 
             <div class="input-wrapper">
-              <input type="email" required/>
+              
               <div class="label required">Email</div>
+              <input type="email" required />
             </div>
 
             <div class="input-wrapper">
@@ -97,7 +99,7 @@
               <input type="checkbox" required>
             </div>
 
-            <span class="button" tabindex="0">Subscribe</span>
+            <input type="submit" value="Submit" class="button" />
             <span class="success">Thanks for subscribing!</span>
             <span class="error">Something went wrong, please resubmit.</span>
           </form>
